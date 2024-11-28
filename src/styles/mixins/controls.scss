@@ -1,0 +1,222 @@
+@mixin input {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 300;
+  padding: 12px 30px 12px 6px;
+  outline: none;
+  border: 1px solid $gray;
+  color: $white;
+  border-radius: 4px;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  &:focus {
+    outline: 2px solid $gray4;
+    border-color: $gray;
+  }
+  &:hover {
+    border-color: $gray;
+  }
+  &:disabled {
+    background: $gray5;
+    border-color: $gray2;
+  }
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1;
+    color: $gray2;
+    font-weight: 300;
+  }
+  &.error {
+    outline: 2px solid $red;
+    border-color: $red;
+  }
+}
+
+@mixin button($height: 52px) {
+  @include textMedium(14);
+  @include resetButton;
+  @include centering;
+  transition: background, opacity 0.2s linear;
+  height: $height;
+  padding: 12px 30px;
+  gap: 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+@mixin primaryButton($height: 52px) {
+  @include button($height);
+  background: $violet;
+  color: $white;
+  &:hover {
+    background: $darkViolet;
+  }
+  &:disabled {
+    background: $lightBlue;
+    color: $gray;
+    cursor: unset;
+  }
+}
+
+@mixin secondaryButton($height: 52px) {
+  @include button($height);
+  justify-content: flex-start;
+  background: $darkViolet;
+  color: $white;
+  &:hover {
+    background: $darkBlue;
+  }
+  &:disabled {
+    background: $lightBlue;
+    color: $gray2;
+    cursor: unset;
+  }
+}
+
+@mixin yellowButton($height: 52px) {
+  @include button($height);
+  justify-content: flex-start;
+  background: $yellow;
+  color: $white;
+  &:hover {
+    background: $darkYellow;
+  }
+  &:disabled {
+    background: $lightYellow;
+    color: $gray2;
+    cursor: unset;
+  }
+}
+
+@mixin circleButton($height: 52px) {
+  border: none;
+  background: $darkViolet;
+  height: $height;
+  width: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background: $darkBlue;
+  }
+  &:disabled {
+    background: $lightBlue;
+    cursor: unset;
+  }
+}
+
+@mixin circleButtonTransparent($height: 52px) {
+  border: none;
+  background: transparent;
+  height: $height;
+  width: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  &:disabled {
+    background: $lightBlue;
+    color: $gray2;
+    cursor: unset;
+  }
+}
+
+
+@mixin grayButton($height: 52px) {
+  @include button($height);
+  background: $gray4;
+  color: $gray;
+  &:hover {
+    color: $black;
+  }
+  &:disabled {
+    background: $gray4;
+    color: $gray2;
+    cursor: unset;
+  }
+}
+
+@mixin transparentButtonGreen($height: 52px) {
+  @include button($height);
+  background: transparent;
+  color: $green;
+  display: flex;
+  &:hover {
+    color: $darkGreen;
+  }
+  &:disabled {
+    color: $lightGreen;
+    cursor: unset;
+  }
+}
+
+@mixin radioButton {
+  @include textRegular(16);
+  position: relative;
+  padding-left: 36px;
+  input {
+    display: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid $gray2;
+  }
+  &.active {
+    &:before {
+      border: 2px solid $green;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      top: 5px;
+      left: 5px;
+      background: $green;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin checkbox {
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $gray2;
+    border-radius: 4px;
+  }
+  &.checked {
+    &:before {
+      border-color: $green;
+      background-color: $green;
+    }
+    &:after {
+      content: '\2713'; 
+      position: absolute;
+      left: 3px;
+      top: -2px;
+      font-size: 20px;
+      color: $white;
+    }
+  }
+}
