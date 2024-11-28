@@ -37,7 +37,9 @@
   @include textMedium(14);
   @include resetButton;
   @include centering;
-  transition: background, opacity 0.2s linear;
+  transition:
+    background,
+    opacity 0.2s linear;
   height: $height;
   padding: 12px 30px;
   gap: 10px;
@@ -125,7 +127,6 @@
   }
 }
 
-
 @mixin grayButton($height: 52px) {
   @include button($height);
   background: $gray4;
@@ -211,7 +212,7 @@
       background-color: $green;
     }
     &:after {
-      content: '\2713'; 
+      content: '\2713';
       position: absolute;
       left: 3px;
       top: -2px;

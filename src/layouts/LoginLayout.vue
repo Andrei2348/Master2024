@@ -1,11 +1,9 @@
 <template>
-	<div class='login__layout'>
-		<slot />
-	</div>
+  <div class="login__layout">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
-<styles lang="scss">
-</styles>
+<styles lang="scss"></styles>

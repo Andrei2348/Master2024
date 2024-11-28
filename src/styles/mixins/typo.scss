@@ -45,7 +45,7 @@
 }
 
 @mixin textBold($val) {
-  @if $val == 22{
+  @if $val == 22 {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.3;

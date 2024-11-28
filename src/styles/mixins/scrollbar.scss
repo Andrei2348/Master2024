@@ -1,67 +1,67 @@
-// @mixin custom-scrollbar($track-color, $thumb-color) {  
-//   &::-webkit-scrollbar {  
-//     width: 6px;  
-//   }  
-//   &::-webkit-scrollbar-track {  
-//     background: $track-color;  
-//     border-radius: 38px;  
-//   }  
-//   &::-webkit-scrollbar-thumb {  
-//     background: $thumb-color;  
-//     border-radius: 38px;  
-//     &:hover {  
-//       background: lighten($thumb-color, 10%);  
-//     }  
-//   }  
+// @mixin custom-scrollbar($track-color, $thumb-color) {
+//   &::-webkit-scrollbar {
+//     width: 6px;
+//   }
+//   &::-webkit-scrollbar-track {
+//     background: $track-color;
+//     border-radius: 38px;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     background: $thumb-color;
+//     border-radius: 38px;
+//     &:hover {
+//       background: lighten($thumb-color, 10%);
+//     }
+//   }
 // }
 
-@mixin custom-scrollbar() { 
-  &::-webkit-scrollbar {  
-    width: 9px; 
+@mixin custom-scrollbar() {
+  &::-webkit-scrollbar {
+    width: 9px;
     height: 9px;
-  }  
+  }
 
-  /* Стили для "ползунка" (thumb) вертикального скроллбара */  
-  &::-webkit-scrollbar-thumb {  
-    background-color: #592286;  
-    border-radius: 2px; 
-  }  
-
-  /* Стили для "ползунка" (thumb) при наведении */  
-  &::-webkit-scrollbar-thumb:hover {  
+  /* Стили для "ползунка" (thumb) вертикального скроллбара */
+  &::-webkit-scrollbar-thumb {
     background-color: #592286;
-  }  
+    border-radius: 2px;
+  }
 
-  /* Стили для трека (дорожки), по которому движется "ползунок" */  
-  &::-webkit-scrollbar-track {  
+  /* Стили для "ползунка" (thumb) при наведении */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #592286;
+  }
+
+  /* Стили для трека (дорожки), по которому движется "ползунок" */
+  &::-webkit-scrollbar-track {
     background: #707777;
-    border-radius: 2px;  
-  }  
+    border-radius: 2px;
+  }
 
-  /* Стили для горизонтального скроллбара */  
-  &::-webkit-scrollbar:horizontal {  
-    height: 9px;  
-  }  
+  /* Стили для горизонтального скроллбара */
+  &::-webkit-scrollbar:horizontal {
+    height: 9px;
+  }
 
-  /* Стили для "ползунка" (thumb) горизонтального скроллбара */  
-  &::-webkit-scrollbar-thumb:horizontal {  
-    background-color: #592286; 
-  }  
+  /* Стили для "ползунка" (thumb) горизонтального скроллбара */
+  &::-webkit-scrollbar-thumb:horizontal {
+    background-color: #592286;
+  }
 
-  /* Стили для "ползунка" (thumb) горизонтального скроллбара при наведении */  
-  &::-webkit-scrollbar-thumb:horizontal:hover {  
+  /* Стили для "ползунка" (thumb) горизонтального скроллбара при наведении */
+  &::-webkit-scrollbar-thumb:horizontal:hover {
     background-color: #592286;
   }
 }
 
-@mixin hidden-scrollbar {  
-  &::-webkit-scrollbar {  
-    width: 0;  
-  }  
-  &::-webkit-scrollbar-track {  
-    background: transparent;  
-  }  
-  &::-webkit-scrollbar-thumb {  
-    background: transparent;   
-  }  
-}  
+@mixin hidden-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+}

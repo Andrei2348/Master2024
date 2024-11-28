@@ -1,10 +1,7 @@
 <template>
-	<slot />
+  <slot />
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style >
-</style>
+<style></style>
