@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import useApiCall from '@/composables/useApiCall'
-import { UserLoginItem, UserItem, UserApiResponse, UserItemResponse } from '@/types/user'
+import type { UserLoginItem, UserItem, UserApiResponse, UserItemResponse } from '@/types/user'
 import { useRouter } from 'vue-router'
 import { setStorageItemWithExpiry } from '@/helpers/localStorageHelpers'
 
